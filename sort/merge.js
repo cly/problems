@@ -44,3 +44,17 @@ module.exports = function(a){
   mergeSort(a, 0, a.length-1);
   return a;
 };
+
+//let T(n) be running time on a problem of n
+//suppose division of problem yields a subproblems and each of which is 1/b the size of original, for merge sort a = b = 2
+//T(n) = {O(1) if n <= csmall}, {aT(n/b) + D(n) + C(n) ow}
+//
+//D(n) divide is constant time
+//C(n) combine is linear time
+//conquer is 2T(n/2)
+//
+//Master Theorem
+//
+//if T(n) = 9T(n/3) + n, a = 9, b = 3, f(n) = n, n^(log_ba) = n^2, then this is more significant, so T(n) = n^2
+//if T(n) = T(2n/3) + 1, n^(log_(3/2)1) = n^0 = 1, which is same as 1, then T(n) = \theta n^(logb)a * lgn
+//if T(n) = 3T(n/4)+nlgn, then nlgn is more significant, T(n) = nlgn
