@@ -1,11 +1,13 @@
 var insertion = require('./insertion.js');
 var merge = require('./merge.js');
+var heap = require('./heap.js');
+var quick = require('./quick.js');
 
 var input = [5, 2, 4, 6, 1, 3],
     expected = [1, 2, 3, 4, 5, 6],
     start;
 
-var algos = [insertion, merge];
+var algos = [insertion, merge, heap, quick];
 
 var isExpected = (function(expected){
   return function(e, i, a){
